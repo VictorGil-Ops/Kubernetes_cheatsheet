@@ -47,12 +47,13 @@
     kubectl get serviceaccounts/build-robot -o yaml
     kubectl delete serviceaccount/build-robot
 
-## Tokens
+## Tokens & secrets
 
+    kubectl get secrets
     kubectl get secret --namespace=<namespace>
     kubectl get secret <token> --namespace=<namespace> -o yaml
 
-    # Creación manual de un API token para una SA existente
+    # creación manual de un API token para una SA existente
     kubectl apply -f - <<EOF
     apiVersion: v1
     kind: Secret
@@ -63,3 +64,4 @@
     type: kubernetes.io/service-account-token
     EOF
 
+    kubectl describe secrets/build-robot-secret
