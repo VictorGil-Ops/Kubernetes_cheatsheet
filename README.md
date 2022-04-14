@@ -4,7 +4,6 @@
 
 [2. Kubernetes dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
-
 ## Kubernetes dashboard
 
     usar --enable-skip-login para evitar el login  
