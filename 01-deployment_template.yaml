@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        role: nginx
     spec:
       containers:
       - name: nginx
@@ -42,4 +43,4 @@ spec:
           initialDelaySeconds: 15
           periodSeconds: 20
         ports:
-        - containerPort: 80
+        - containerPort: 8080
