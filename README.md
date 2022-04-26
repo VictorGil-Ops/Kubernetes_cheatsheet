@@ -64,3 +64,11 @@
     EOF
 
     kubectl describe secrets/build-robot-secret
+
+## Nodes
+
+    kubectl get nodes
+    kubectl drain node1
+    kubectl cordom node1
+    kubectl uncordom node1
+    
