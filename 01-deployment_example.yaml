@@ -1,5 +1,4 @@
-    
-## Deployment ref
+## Deployment nginx example
 apiVersion: apps/v1
 kind: Deployment
 metadata:
