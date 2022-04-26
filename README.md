@@ -19,24 +19,24 @@
 
 ## kubectl
 
-    kubectl version --client
-    kubectl version -o json
+    	kubectl version --client
+    	kubectl version -o json
 
 ## Contexts
 
-    kubectl config get-contexts
-    kubectl config use-context <mycontext>
+    	kubectl config get-contexts
+    	kubectl config use-context <mycontext>
 
 ## Nodes & cluster info
 
-    kubectl get nodes
-    kubectl cluster-info
-    kubectl get all -A
-    kubectl -n kube-system get cm kubeadm-config -o yaml
+    	kubectl get nodes
+    	kubectl cluster-info
+    	kubectl get all -A
+    	kubectl -n kube-system get cm kubeadm-config -o yaml
 
 ## Service Accounts
 
-    kubectl get serviceaccounts
+    	kubectl get serviceaccounts
 
     # crear SA adicional
     kubectl apply -f - <<EOF
@@ -46,14 +46,14 @@
     name: build-robot
     EOF
 
-    kubectl get serviceaccounts/build-robot -o yaml
-    kubectl delete serviceaccount/build-robot
+    	kubectl get serviceaccounts/build-robot -o yaml
+    	kubectl delete serviceaccount/build-robot
 
 ## Tokens & secrets
 
-    kubectl get secrets
-    kubectl get secret --namespace=<namespace>
-    kubectl get secret <token> --namespace=<namespace> -o yaml
+    	kubectl get secrets
+    	kubectl get secret --namespace=<namespace>
+    	kubectl get secret <token> --namespace=<namespace> -o yaml
 
     # creación manual de un API token para una SA existente
     kubectl apply -f - <<EOF
@@ -66,27 +66,27 @@
     type: kubernetes.io/service-account-token
     EOF
 
-    kubectl describe secrets/build-robot-secret
+    	kubectl describe secrets/build-robot-secret
 
 ## Nodes
 
-    kubectl get node --output yaml
-    kubectl drain node1
-    kubectl cordom node1
-    kubectl uncordom node1
+    	kubectl get node --output yaml
+    	kubectl drain node1
+    	kubectl cordom node1
+ 	kubectl uncordom node1
     
 ## Namespaces
 	
-    kubectl get ns -o yaml
-    kubectl get pods --all-namespaces
-    kubectl config set-context --current --namespace=<namespace>
+    	kubectl get ns -o yaml
+    	kubectl get pods --all-namespaces
+    	kubectl config set-context --current --namespace=<namespace>
 
 ## Label
 
-    kubectl label node worker-node1 node-role.kubernetes.io/worker=worker
-    kubectl label --overwrite nodes <your_node> kubernetes.io/role=<your_new_label>
+    	kubectl label node worker-node1 node-role.kubernetes.io/worker=worker
+    	kubectl label --overwrite nodes <your_node> kubernetes.io/role=<your_new_label>
 
 ## API
  
-    kubectl api-resources --namespaced=true
-    kubectl api-resources --namespaced=false
+	kubectl api-resources --namespaced=true
+    	kubectl api-resources --namespaced=false	
