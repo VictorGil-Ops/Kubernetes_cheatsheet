@@ -76,15 +76,17 @@
     kubectl uncordom node1
     
 ## Namespaces
-
+	
+    kubectl get ns -o yaml
     kubectl get pods --all-namespaces
+    kubectl config set-context --current --namespace=<namespace>
 
 ## Label
 
     kubectl label node worker-node1 node-role.kubernetes.io/worker=worker
-	kubectl label --overwrite nodes <your_node> kubernetes.io/role=<your_new_label>
+    kubectl label --overwrite nodes <your_node> kubernetes.io/role=<your_new_label>
 
 ## API
  
     kubectl api-resources --namespaced=true
-    kubectl api-resources --namespaced=false 
+    kubectl api-resources --namespaced=false
