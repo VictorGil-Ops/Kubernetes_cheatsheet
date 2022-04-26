@@ -20,6 +20,7 @@
 ## kubectl
 
     kubectl version --client
+    kubectl version -o json
 
 ## Contexts
 
@@ -30,6 +31,8 @@
 
     kubectl get nodes
     kubectl cluster-info
+    kubectl get all -A
+    kubectl -n kube-system get cm kubeadm-config -o yaml
 
 ## Service Accounts
 
@@ -67,8 +70,21 @@
 
 ## Nodes
 
-    kubectl get nodes
+    kubectl get node --output yaml
     kubectl drain node1
     kubectl cordom node1
     kubectl uncordom node1
     
+## Namespaces
+
+    kubectl get pods --all-namespaces
+
+## Label
+
+    kubectl label node worker-node1 node-role.kubernetes.io/worker=worker
+	kubectl label --overwrite nodes <your_node> kubernetes.io/role=<your_new_label>
+
+## API
+ 
+    kubectl api-resources --namespaced=true
+    kubectl api-resources --namespaced=false 
