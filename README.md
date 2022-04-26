@@ -21,6 +21,25 @@
     kubectl get secrets
     kubectl describe secret dashboard-admin-sa-token-<id>
 
+
+## resources
+
+  - namespaces 			= ns
+  - services   			= svc
+  - ingress    			= ign
+  - configmaps 			= cm
+  - replicasets 		= rs
+  - replicationcontrollers 	= rc
+  - endpoints
+  - pods
+  - secrets
+  - deployments
+  - jobs
+  - cronjobs
+  - daemonsets
+  - statefulsets
+  - persistentvolumes
+   
 ## kubectl
 
     kubectl version --client
@@ -93,4 +112,4 @@
 ## API
  
     kubectl api-resources --namespaced=true
-    kubectl api-resources --namespaced=false	
+    kubectl api-resources --namespaced=false
