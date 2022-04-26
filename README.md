@@ -1,5 +1,9 @@
 # Kubernetes_cheatsheet
 
+
+# &#9096; [Play with kubernetes](https://labs.play-with-k8s.com/)
+
+
 [1. Install tools](https://kubernetes.io/es/docs/tasks/tools/)
 
 [2. Kubernetes dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
@@ -45,8 +49,10 @@
     kubectl version --client
     kubectl version -o json
 
-## Contexts
-
+## Contexts & kubeconfig
+    
+    export KUBECONFIG=~/.kube/config
+    kubectl config --kubeconfig=~/.kube/config
     kubectl config get-contexts
     kubectl config use-context <mycontext>
 
