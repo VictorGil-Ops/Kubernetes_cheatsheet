@@ -4,6 +4,10 @@
 
 [2. Kubernetes dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
+[3. kubecolors](https://github.com/hidetatz/kubecolor)
+
+[4. autocompletion](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#enable-shell-autocompletion)
+
 ## Kubernetes dashboard
 
     usar --enable-skip-login para evitar el login  
